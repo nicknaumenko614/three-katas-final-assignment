@@ -18,4 +18,11 @@ public class TriangleSorter {
                 || (sideB == sideC && sideB != sideA)
                 || (sideC == sideA && sideC != sideB);
     }
+
+    //gonna use Pythagorean theorem to test for the right triangle: if a squared plus b squared equals c squared, it's a right triangle
+    public boolean isRightTriangle(int sideA, int sideB, int sideC) {
+        return Math.pow(sideA, 2) + Math.pow(sideB, 2) == Math.pow(sideC, 2)
+                || Math.pow(sideB, 2) + Math.pow(sideC, 2) == Math.pow(sideA, 2)
+                || Math.pow(sideC, 2) + Math.pow(sideA, 2) == Math.pow(sideB, 2);
+    }
 }

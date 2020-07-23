@@ -60,6 +60,21 @@ public class TrianglesTest {
     }
 
     @Test
+    public void isRightTriangleReturnsTrueWhenItIs() {
+        TriangleSorter underTest = new TriangleSorter();
+        boolean actualResult = underTest.isRightTriangle(3, 4, 5);
+        assertThat(actualResult).isTrue();
+    }
+
+    @Test
+    public void isRightTriangleReturnsFalseWhenItIsNot() {
+        TriangleSorter underTest = new TriangleSorter();
+        boolean actualResult = underTest.isRightTriangle(2, 3, 4);
+        assertThat(actualResult).isFalse();
+    }
+
+
+    @Test
     public void threeEqualSidesIsAnEquilateralTriangle() {
         TriangleSorter underTest = new TriangleSorter();
         String triangleType = underTest.analyze(3, 3, 3);
