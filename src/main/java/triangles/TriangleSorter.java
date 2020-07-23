@@ -7,6 +7,8 @@ public class TriangleSorter {
                 return "Equilateral";
             } else if (isIsoscelesTriangle(sideA, sideB, sideC)) {
                 return "Isosceles";
+            } else if (isRightTriangle(sideA, sideB, sideC)) {
+                return "Right";
             } else {
                 return "";
             }

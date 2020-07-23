@@ -84,14 +84,21 @@ public class TrianglesTest {
     @Test
     public void twoEqualSidesIsAnIsoscelesTriangle() {
         TriangleSorter underTest = new TriangleSorter();
-        String triangleType = underTest.analyze(3,5,5);
+        String triangleType = underTest.analyze(3, 5, 5);
         assertThat(triangleType).isEqualTo("Isosceles");
+    }
+
+    @Test
+    public void threeSidesCanMakeRightTriangle() {
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(5, 4, 3);
+        assertThat(triangleType).isEqualTo("Right");
     }
 
     @Test
     public void threeSidesThatCannotMakeTriangle() {
         TriangleSorter underTest = new TriangleSorter();
-        String triangleType = underTest.analyze(5,3,2);
+        String triangleType = underTest.analyze(5, 3, 2);
         assertThat(triangleType).isEqualTo("Triangle Can Not Be Made");
     }
 }
