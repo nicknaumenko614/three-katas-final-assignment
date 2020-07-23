@@ -32,19 +32,32 @@ public class TrianglesTest {
     }
 
     @Test
-    public void isEquilateralTriangleReturnsTrueWhenItIs(){
+    public void isEquilateralTriangleReturnsTrueWhenItIs() {
         TriangleSorter underTest = new TriangleSorter();
         boolean actualResult = underTest.isEquilateralTriangle(3, 3, 3);
         assertThat(actualResult).isTrue();
     }
 
     @Test
-    public void isEquilateralTriangleReturnsFalseWhenItIsNot(){
+    public void isEquilateralTriangleReturnsFalseWhenItIsNot() {
         TriangleSorter underTest = new TriangleSorter();
         boolean actualResult = underTest.isEquilateralTriangle(5, 5, 3);
         assertThat(actualResult).isFalse();
     }
 
+    @Test
+    public void isIsoscelesTriangleReturnsTrueWhenItIs() {
+        TriangleSorter underTest = new TriangleSorter();
+        boolean actualResult = underTest.isIsoscelesTriangle(5, 5, 3);
+        assertThat(actualResult).isTrue();
+    }
+
+    @Test
+    public void isIsoscelesTriangleReturnsFalseWhenItIsNot() {
+        TriangleSorter underTest = new TriangleSorter();
+        boolean actualResult = underTest.isIsoscelesTriangle(3, 4, 5);
+        assertThat(actualResult).isFalse();
+    }
 
     @Test
     public void threeEqualSidesIsAnEquilateralTriangle() {
