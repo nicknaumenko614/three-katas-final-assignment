@@ -5,6 +5,8 @@ public class TriangleSorter {
         if (canTriangleBeConstructed(sideA, sideB, sideC)) {
             if (isEquilateralTriangle(sideA, sideB, sideC)) {
                 return "Equilateral";
+            } else if (isIsoscelesTriangle(sideA, sideB, sideC)) {
+                return "Isosceles";
             } else {
                 return "";
             }
