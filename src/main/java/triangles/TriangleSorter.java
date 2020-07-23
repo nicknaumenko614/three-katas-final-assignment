@@ -3,7 +3,11 @@ package triangles;
 public class TriangleSorter {
     public String analyze(int sideA, int sideB, int sideC) {
         if (canTriangleBeConstructed(sideA, sideB, sideC)) {
-            return "";
+            if (isEquilateralTriangle(sideA, sideB, sideC)) {
+                return "Equilateral";
+            } else {
+                return "";
+            }
         } else {
             return "Triangle Can Not Be Made";
         }
