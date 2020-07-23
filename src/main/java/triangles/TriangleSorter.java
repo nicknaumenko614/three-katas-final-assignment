@@ -8,4 +8,8 @@ public class TriangleSorter {
     protected boolean canTriangleBeConstructed(int sideA, int sideB, int sideC) {
         return (sideA + sideB) > sideC && (sideA + sideC) > sideB && (sideB + sideC) > sideA;
     }
+
+    protected boolean isEquilateralTriangle(int sideA, int sideB, int sideC) {
+        return sideA == sideB && sideB == sideC;
+    }
 }
