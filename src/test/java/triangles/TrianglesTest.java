@@ -96,6 +96,13 @@ public class TrianglesTest {
     }
 
     @Test
+    public void threeSidesCanMakeScaleneTriangle() {
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(2,4,3);
+        assertThat(triangleType).isEqualTo("Scalene");
+    }
+
+    @Test
     public void threeSidesThatCannotMakeTriangle() {
         TriangleSorter underTest = new TriangleSorter();
         String triangleType = underTest.analyze(5, 3, 2);

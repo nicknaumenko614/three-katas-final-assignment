@@ -10,7 +10,7 @@ public class TriangleSorter {
             } else if (isRightTriangle(sideA, sideB, sideC)) {
                 return "Right";
             } else {
-                return "";
+                return "Scalene";
             }
         } else {
             return "Triangle Can Not Be Made";
