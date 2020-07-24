@@ -6,6 +6,25 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class BabySitterTest {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Test
     public void oneHourPreBedTimeShouldPay12() {
         WageCalculator underTest = new WageCalculator();
