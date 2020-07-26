@@ -65,5 +65,8 @@ public class BabySitterTest {
     public void canCalculateHoursWorkedBetweenStartingHourAndBedtime () {
         int actualResult = underTest.calculateHoursWorkedBetweenStartingHourAndBedtime(17, 2, 21);
         assertThat(actualResult).isEqualTo(4);
+
+        actualResult = underTest.calculateHoursWorkedBetweenStartingHourAndBedtime(21, 2, 21);
+        assertThat(actualResult).isEqualTo(0);
     }
 }
