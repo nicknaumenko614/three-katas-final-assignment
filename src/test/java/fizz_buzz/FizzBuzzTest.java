@@ -17,10 +17,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class FizzBuzzTest {
 
     @Test
-    public void whenGiven3FizzBuzzSays3() {
+    public void whenGiven3FizzBuzzSaysFizz() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(3);
         assertThat(spokenWord).isEqualTo("Fizz");
+    }
+
+    @Test
+    public void whenGiven5FizzBuzzSaysBuzz() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.say(5);
+        assertThat(spokenWord).isEqualTo("Buzz");
     }
 
     @Test

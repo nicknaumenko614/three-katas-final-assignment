@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="fizz_buzz.FizzBuzzTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-26T01:02:45" hostname="WECANCODEIT-67" time="0.116">
+<testsuite name="fizz_buzz.FizzBuzzTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-26T01:15:43" hostname="WECANCODEIT-67" time="0.115">
   <properties/>
-  <testcase name="whenGiven3FizzBuzzSays3()" classname="fizz_buzz.FizzBuzzTest" time="0.116"/>
+  <testcase name="whenGiven5FizzBuzzSaysBuzz()" classname="fizz_buzz.FizzBuzzTest" time="0.115"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
