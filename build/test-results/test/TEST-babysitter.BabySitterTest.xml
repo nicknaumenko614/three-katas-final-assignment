@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="babysitter.BabySitterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-26T03:52:00" hostname="DESKTOP-AEKIPR7" time="0.081">
+<testsuite name="babysitter.BabySitterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-26T16:31:42" hostname="DESKTOP-AEKIPR7" time="0.09">
   <properties/>
-  <testcase name="canCalculateHoursWorkedBetweenBedtimeAndMidnight()" classname="babysitter.BabySitterTest" time="0.081"/>
+  <testcase name="canCalculateHoursWorkedBetweenStartingHourAndBedtime()" classname="babysitter.BabySitterTest" time="0.09"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

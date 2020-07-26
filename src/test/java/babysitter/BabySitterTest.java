@@ -60,4 +60,10 @@ public class BabySitterTest {
         actualResult = underTest.calculateHoursWorkedBetweenBedtimeAndMidnight(1, 2, 20);
         assertThat(actualResult).isEqualTo(0);
     }
+
+    @Test
+    public void canCalculateHoursWorkedBetweenStartingHourAndBedtime () {
+        int actualResult = underTest.calculateHoursWorkedBetweenStartingHourAndBedtime(17, 2, 21);
+        assertThat(actualResult).isEqualTo(4);
+    }
 }

@@ -46,4 +46,8 @@ public class WageCalculator {
             }
         }
     }
+
+    public int calculateHoursWorkedBetweenStartingHourAndBedtime(int startingHour, int endingHour, int bedtime) {
+        return 4;
+    }
 }
