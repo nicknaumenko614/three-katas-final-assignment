@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="babysitter.BabySitterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-26T21:58:18" hostname="DESKTOP-AEKIPR7" time="0.078">
+<testsuite name="babysitter.BabySitterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-26T22:16:04" hostname="DESKTOP-AEKIPR7" time="0.096">
   <properties/>
-  <testcase name="validateShiftIsBetween5pmAnd4amReturnsTrueIfItIs()" classname="babysitter.BabySitterTest" time="0.078"/>
+  <testcase name="validateBedtimeStartIsBetween8pmAnd11pmReturnTrueIfItIs()" classname="babysitter.BabySitterTest" time="0.096"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -7,7 +7,7 @@ public class WageCalculator {
     private static final int DURING_BEDTIME_PAY_RATE = 8;
     private static final int AFTER_MIDNIGHT_PAY_RATE = 16;
 
-    public int calculateShiftWage(int startingHour, int endingHour, int bedtime) {
+    protected int calculateShiftWage(int startingHour, int endingHour, int bedtime) {
         int wageBeforeBedTime = (calculateHoursWorkedBetweenStartingHourAndBedtime(startingHour, endingHour, bedtime)) * BEFORE_BED_TIME_PAY;
         int wageDuringBedTime = (calculateHoursWorkedBetweenBedtimeAndMidnight(startingHour, endingHour, bedtime)) * DURING_BEDTIME_PAY_RATE;
         int wageAfterMidnight = (calculateHoursWorkedAfterMidnight(endingHour)) * AFTER_MIDNIGHT_PAY_RATE;
@@ -35,7 +35,7 @@ public class WageCalculator {
 
     }
 
-    public int calculateHoursWorkedBetweenBedtimeAndMidnight(int startingHour, int endingHour, int bedtime) {
+    protected int calculateHoursWorkedBetweenBedtimeAndMidnight(int startingHour, int endingHour, int bedtime) {
         endingHour = convertTime(endingHour);
         startingHour = convertTime(startingHour);
         bedtime = convertTime(bedtime);
@@ -60,7 +60,7 @@ public class WageCalculator {
         }
     }
 
-    public int calculateHoursWorkedBetweenStartingHourAndBedtime(int startingHour, int endingHour, int bedtime) {
+    protected int calculateHoursWorkedBetweenStartingHourAndBedtime(int startingHour, int endingHour, int bedtime) {
         endingHour = convertTime(endingHour);
         startingHour = convertTime(startingHour);
         bedtime = convertTime(bedtime);
@@ -76,7 +76,7 @@ public class WageCalculator {
         }
     }
 
-    public boolean isStartingHourBeforeEndingHour(int startingHour, int endingHour) {
+    protected boolean isStartingHourBeforeEndingHour(int startingHour, int endingHour) {
         endingHour = convertTime(endingHour);
         startingHour = convertTime(startingHour);
 
@@ -88,10 +88,18 @@ public class WageCalculator {
 
     }
 
-    public boolean isShiftBetween17hrsAnd4hrs(int startingHour, int endingHour) {
+    protected boolean isShiftBetween17hrsAnd4hrs(int startingHour, int endingHour) {
         if (startingHour >= 17 && convertTime(endingHour) <= convertTime(4)) {
             return true;
         } else {
+            return false;
+        }
+    }
+
+    protected boolean isBedtimeStartBetween20hrsAnd23hrs(int bedtime) {
+        if (bedtime>=20 && bedtime<=23) {
+            return true;
+        }else {
             return false;
         }
     }
