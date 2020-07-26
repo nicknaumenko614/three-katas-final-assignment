@@ -13,4 +13,16 @@ public class WageCalculator {
             return inputTime + 7;
         }
     }
+
+    protected int calculateHoursWorkedAfterMidnight(int endingHour) {
+        endingHour = convertTime((endingHour));
+        int midnight = convertTime(24);
+
+        if (endingHour > midnight) {
+            return endingHour - midnight;
+        } else {
+            return 0;
+        }
+
+    }
 }

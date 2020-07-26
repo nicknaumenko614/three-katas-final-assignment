@@ -12,7 +12,7 @@ public class BabySitterTest {
     private WageCalculator underTest;
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         underTest = new WageCalculator();
     }
 
@@ -38,7 +38,11 @@ public class BabySitterTest {
     }
 
     @Test
-    public void canCalculateHoursWorkedAfterMidnight () {
+    public void canCalculateHoursWorkedAfterMidnight() {
+        int actualResult = underTest.calculateHoursWorkedAfterMidnight(3);
+        assertThat(actualResult).isEqualTo(3);
 
+        actualResult = underTest.calculateHoursWorkedAfterMidnight(23);
+        assertThat(actualResult).isEqualTo(0);
     }
 }
