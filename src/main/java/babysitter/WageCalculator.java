@@ -25,4 +25,25 @@ public class WageCalculator {
         }
 
     }
+
+    public int calculateHoursWorkedBetweenBedtimeAndMidnight(int startingHour, int endingHour, int bedtime) {
+        endingHour = convertTime(endingHour);
+        startingHour = convertTime(startingHour);
+        bedtime = convertTime(bedtime);
+        int midnight = convertTime(24);
+        if (endingHour <= midnight) {
+            return endingHour - bedtime;
+        } else {
+            if (startingHour < bedtime) {
+                return midnight - bedtime;
+            } else {
+                int workedHours = midnight - startingHour;
+                if (workedHours < 0) {
+                    return 0;
+                } else {
+                    return workedHours;
+                }
+            }
+        }
+    }
 }
