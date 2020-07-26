@@ -107,5 +107,16 @@ public class BabySitterTest {
         assertThat(actualResult).isFalse();
     }
 
+    @Test
+    public void validateShiftIsBetween5pmAnd4amReturnsTrueIfItIs() {
+        boolean actualResult = underTest.isShiftBetween17hrsAnd4hrs(18, 3);
+        assertThat(actualResult).isTrue();
+
+        actualResult = underTest.isShiftBetween17hrsAnd4hrs(17, 4);
+        assertThat(actualResult).isTrue();
+
+        actualResult = underTest.isShiftBetween17hrsAnd4hrs(15, 3);
+        assertThat(actualResult).isFalse();
+    }
 
 }

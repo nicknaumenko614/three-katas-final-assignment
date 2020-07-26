@@ -87,4 +87,12 @@ public class WageCalculator {
         }
 
     }
+
+    public boolean isShiftBetween17hrsAnd4hrs(int startingHour, int endingHour) {
+        if (startingHour >= 17 && convertTime(endingHour) <= convertTime(4)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
