@@ -120,8 +120,17 @@ public class BabySitterTest {
     }
 
     @Test
-    public void validateBedtimeStartIsBetween8pmAnd11pmReturnTrueIfItIs(){
+    public void validateBedtimeStartIsBetween8pmAnd11pmReturnTrueIfItIs() {
         boolean actualResult = underTest.isBedtimeStartBetween20hrsAnd23hrs(20);
         assertThat(actualResult).isTrue();
+
+        actualResult = underTest.isBedtimeStartBetween20hrsAnd23hrs(22);
+        assertThat(actualResult).isTrue();
+
+        actualResult = underTest.isBedtimeStartBetween20hrsAnd23hrs(23);
+        assertThat(actualResult).isTrue();
+
+        actualResult = underTest.isBedtimeStartBetween20hrsAnd23hrs(3);
+        assertThat(actualResult).isFalse();
     }
 }
