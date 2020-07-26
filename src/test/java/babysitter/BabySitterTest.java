@@ -63,10 +63,17 @@ public class BabySitterTest {
 
     @Test
     public void canCalculateHoursWorkedBetweenStartingHourAndBedtime () {
-        int actualResult = underTest.calculateHoursWorkedBetweenStartingHourAndBedtime(17, 2, 21);
-        assertThat(actualResult).isEqualTo(4);
+
+        int actualResult = underTest.calculateHoursWorkedBetweenStartingHourAndBedtime(21, 2, 20);
+        assertThat(actualResult).isEqualTo(0);
 
         actualResult = underTest.calculateHoursWorkedBetweenStartingHourAndBedtime(21, 2, 21);
         assertThat(actualResult).isEqualTo(0);
+
+        actualResult = underTest.calculateHoursWorkedBetweenStartingHourAndBedtime(17, 2, 21);
+        assertThat(actualResult).isEqualTo(4);
+
+        actualResult = underTest.calculateHoursWorkedBetweenStartingHourAndBedtime(17, 19, 23);
+        assertThat(actualResult).isEqualTo(2);
     }
 }

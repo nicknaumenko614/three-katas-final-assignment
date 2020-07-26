@@ -51,11 +51,15 @@ public class WageCalculator {
         endingHour = convertTime(endingHour);
         startingHour = convertTime(startingHour);
         bedtime = convertTime(bedtime);
-        int midnight = convertTime(24);
-        if (bedtime >= endingHour) {
-            return startingHour-endingHour;
-        }else {
-            return bedtime-startingHour;
+
+        if (bedtime <= startingHour) {
+            return 0;
+        } else {
+            if (bedtime > endingHour) {
+                return endingHour - startingHour;
+            } else {
+                return bedtime - startingHour;
+            }
         }
     }
 }
