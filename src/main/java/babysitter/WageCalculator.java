@@ -48,6 +48,14 @@ public class WageCalculator {
     }
 
     public int calculateHoursWorkedBetweenStartingHourAndBedtime(int startingHour, int endingHour, int bedtime) {
-        return 4;
+        endingHour = convertTime(endingHour);
+        startingHour = convertTime(startingHour);
+        bedtime = convertTime(bedtime);
+        int midnight = convertTime(24);
+        if (bedtime >= endingHour) {
+            return startingHour-endingHour;
+        }else {
+            return bedtime-startingHour;
+        }
     }
 }
