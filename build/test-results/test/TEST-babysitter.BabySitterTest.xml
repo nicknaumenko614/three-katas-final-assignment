@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="babysitter.BabySitterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-26T17:20:36" hostname="DESKTOP-AEKIPR7" time="0.076">
+<testsuite name="babysitter.BabySitterTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-07-26T19:27:20" hostname="DESKTOP-AEKIPR7" time="0.098">
   <properties/>
-  <testcase name="canCalculateHoursWorkedBetweenStartingHourAndBedtime()" classname="babysitter.BabySitterTest" time="0.076"/>
+  <testcase name="canConvertTimeBeforeMidnight()" classname="babysitter.BabySitterTest" time="0.074"/>
+  <testcase name="canConvertTimeAfterMidnight()" classname="babysitter.BabySitterTest" time="0.002"/>
+  <testcase name="canCalculateHoursWorkedBetweenBedtimeAndMidnight()" classname="babysitter.BabySitterTest" time="0.002"/>
+  <testcase name="shiftFrom5pmto6pmShouldPay12()" classname="babysitter.BabySitterTest" time="0.002"/>
+  <testcase name="canCalculateHoursWorkedBetweenStartingHourAndBedtime()" classname="babysitter.BabySitterTest" time="0.002"/>
+  <testcase name="canCalculateHoursWorkedAfterMidnight()" classname="babysitter.BabySitterTest" time="0.002"/>
+  <testcase name="twoHoursDuringBedTimeSHouldPay16()" classname="babysitter.BabySitterTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -17,9 +17,15 @@ public class BabySitterTest {
     }
 
     @Test
-    public void oneHourPreBedTimeShouldPay12() {
+    public void shiftFrom5pmto6pmShouldPay12() {
         int wage = underTest.calculateShiftWage(17, 18, 20);
         assertThat(wage).isEqualTo(12);
+    }
+
+    @Test
+    public void twoHoursDuringBedTimeSHouldPay16() {
+        int wage = underTest.calculateShiftWage(20, 22, 20);
+        assertThat(wage).isEqualTo(16);
     }
 
     @Test
@@ -59,6 +65,9 @@ public class BabySitterTest {
 
         actualResult = underTest.calculateHoursWorkedBetweenBedtimeAndMidnight(1, 2, 20);
         assertThat(actualResult).isEqualTo(0);
+
+        actualResult = underTest.calculateHoursWorkedBetweenBedtimeAndMidnight(20, 22, 20);
+        assertThat(actualResult).isEqualTo(2);
     }
 
     @Test
