@@ -16,25 +16,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzTest {
 
-//    @Test
-//    public void createFizzBuzzClass() {
-//        FizzBuzz underTest = new FizzBuzz();
-//    }
-
-    @Test
-    public void whenGiven1FizzBuzzSays1() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(1);
-        assertThat(spokenWord).isEqualTo("1");
-    }
-
-    @Test
-    public void whenGiven2FizzBuzzSays2() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(2);
-        assertThat(spokenWord).isEqualTo("2");
-    }
-
     @Test
     public void whenGiven3FizzBuzzSays3() {
         FizzBuzz underTest = new FizzBuzz();
@@ -43,60 +24,12 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void whenGiven4FizzBuzzSays4() {
+    public void whenGiven1FizzBuzzSays1() {
         FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(4);
-        assertThat(spokenWord).isEqualTo("4");
+        String spokenWord = underTest.say(1);
+        assertThat(spokenWord).isEqualTo("1");
     }
 
-    @Test
-    public void whenGiven5FizzBuzzSays5() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(5);
-        assertThat(spokenWord).isEqualTo("Buzz");
-    }
-
-    @Test
-    public void whenGiven6FizzBuzzSays6() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(6);
-        assertThat(spokenWord).isEqualTo("Fizz");
-    }
-
-    @Test
-    public void whenGiven7FizzBuzzSays7() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(7);
-        assertThat(spokenWord).isEqualTo("7");
-    }
-
-    @Test
-    public void whenGiven8FizzBuzzSays8() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(8);
-        assertThat(spokenWord).isEqualTo("8");
-    }
-
-    @Test
-    public void whenGiven9FizzBuzzSays9() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(9);
-        assertThat(spokenWord).isEqualTo("Fizz");
-    }
-
-    @Test
-    public void whenGiven10FizzBuzzSays10() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(10);
-        assertThat(spokenWord).isEqualTo("Buzz");
-    }
-
-    @Test
-    public void whenGiven15FizzBuzzSaysFizzBuzz() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(15);
-        assertThat(spokenWord).isEqualTo("FizzBuzz");
-    }
 
 }
 
