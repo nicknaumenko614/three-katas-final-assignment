@@ -8,10 +8,17 @@ public class WageCalculator {
     private static final int AFTER_MIDNIGHT_PAY_RATE = 16;
 
     protected int calculateShiftWage(int startingHour, int endingHour, int bedtime) {
-        int wageBeforeBedTime = (calculateHoursWorkedBetweenStartingHourAndBedtime(startingHour, endingHour, bedtime)) * BEFORE_BED_TIME_PAY;
-        int wageDuringBedTime = (calculateHoursWorkedBetweenBedtimeAndMidnight(startingHour, endingHour, bedtime)) * DURING_BEDTIME_PAY_RATE;
-        int wageAfterMidnight = (calculateHoursWorkedAfterMidnight(endingHour)) * AFTER_MIDNIGHT_PAY_RATE;
-        return (wageBeforeBedTime + wageDuringBedTime + wageAfterMidnight);
+        if (isStartingHourBeforeEndingHour(startingHour, endingHour)
+                && isShiftBetween17hrsAnd4hrs(startingHour, endingHour)
+                && isBedtimeStartBetween20hrsAnd23hrs(bedtime)) {
+            int wageBeforeBedTime = (calculateHoursWorkedBetweenStartingHourAndBedtime(startingHour, endingHour, bedtime)) * BEFORE_BED_TIME_PAY;
+            int wageDuringBedTime = (calculateHoursWorkedBetweenBedtimeAndMidnight(startingHour, endingHour, bedtime)) * DURING_BEDTIME_PAY_RATE;
+            int wageAfterMidnight = (calculateHoursWorkedAfterMidnight(endingHour)) * AFTER_MIDNIGHT_PAY_RATE;
+            return (wageBeforeBedTime + wageDuringBedTime + wageAfterMidnight);
+        } else {
+            throw new RuntimeException("Input Parameters Invalid");
+        }
+
     }
 
 
@@ -97,9 +104,9 @@ public class WageCalculator {
     }
 
     protected boolean isBedtimeStartBetween20hrsAnd23hrs(int bedtime) {
-        if (bedtime>=20 && bedtime<=23) {
+        if (bedtime >= 20 && bedtime <= 23) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
