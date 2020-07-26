@@ -75,4 +75,16 @@ public class WageCalculator {
             }
         }
     }
+
+    public boolean isStartingHourBeforeEndingHour(int startingHour, int endingHour) {
+        endingHour = convertTime(endingHour);
+        startingHour = convertTime(startingHour);
+
+        if (startingHour < endingHour) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
 }

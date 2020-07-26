@@ -29,6 +29,18 @@ public class BabySitterTest {
     }
 
     @Test
+    public void shiftFrom9pmto2amBedtime8pmShouldPay56() {
+        int wage = underTest.calculateShiftWage(21, 2, 20);
+        assertThat(wage).isEqualTo(56);
+    }
+
+    @Test
+    public void shiftFrom7pmTo3amBedtime10pmShouldPay100() {
+        int wage = underTest.calculateShiftWage(19, 3, 22);
+        assertThat(wage).isEqualTo(100);
+    }
+
+    @Test
     public void canConvertTimeBeforeMidnight() {
         int actualResult = underTest.convertTime(20);
         assertThat(actualResult).isEqualTo(3);
@@ -71,7 +83,7 @@ public class BabySitterTest {
     }
 
     @Test
-    public void canCalculateHoursWorkedBetweenStartingHourAndBedtime () {
+    public void canCalculateHoursWorkedBetweenStartingHourAndBedtime() {
 
         int actualResult = underTest.calculateHoursWorkedBetweenStartingHourAndBedtime(21, 2, 20);
         assertThat(actualResult).isEqualTo(0);
@@ -85,4 +97,12 @@ public class BabySitterTest {
         actualResult = underTest.calculateHoursWorkedBetweenStartingHourAndBedtime(17, 19, 23);
         assertThat(actualResult).isEqualTo(2);
     }
+
+    @Test
+    public void validateStartingHourIsBeforeEndingHourReturnsTrueWhenStartIsBeforeEnd() {
+        boolean actualResult = underTest.isStartingHourBeforeEndingHour(17, 4);
+        assertThat(actualResult).isTrue();
+    }
+
+
 }
