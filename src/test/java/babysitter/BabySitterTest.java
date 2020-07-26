@@ -102,6 +102,9 @@ public class BabySitterTest {
     public void validateStartingHourIsBeforeEndingHourReturnsTrueWhenStartIsBeforeEnd() {
         boolean actualResult = underTest.isStartingHourBeforeEndingHour(17, 4);
         assertThat(actualResult).isTrue();
+
+        actualResult = underTest.isStartingHourBeforeEndingHour(4, 24);
+        assertThat(actualResult).isFalse();
     }
 
 
